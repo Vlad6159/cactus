@@ -19,7 +19,7 @@ class MainController
     {
         return $view->make('product-my-account');
     }
-    public function listPage(View $view)
+    public function productsListPage(View $view)
     {
         $products = ORM::for_table('products')->find_many();
         return $view->make('products-list',['products' => $products]);
