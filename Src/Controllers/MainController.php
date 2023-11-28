@@ -24,5 +24,9 @@ class MainController
         $products = ORM::for_table('products')->find_many();
         return $view->make('products-list',['products' => $products]);
     }
+    public function cartPage(View $view)
+    {
+        return $view->make('product-cart');
+    }
 
 }

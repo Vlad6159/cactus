@@ -26,10 +26,12 @@ $router->get('/',[MainController::class,'indexPage']);
 $router->get('/profile',[MainController::class,'profilePage']);
 $router->post('/profile',[AuthController::class,'login']);
 
-$router->get('/check-out',[MainController::class,'checkoutPage']);
-$router->post('/check-out',[CheckOutController::class,'checkout']);
+$router->get('/products-check-out',[MainController::class,'checkoutPage']);
+$router->post('/products-check-out',[CheckOutController::class,'checkout']);
 
-$router->get('/products',[MainController::class,'productsListPage']);
+$router->get('/products-list',[MainController::class,'productsListPage']);
 $router->get('/add-to-cart',[CartController::class,'addToCart']);
+
+$router->get('/product-cart',[MainController::class,'cartPage']);
 
 $router->dispatch();
